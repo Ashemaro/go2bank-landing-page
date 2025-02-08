@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go2Bank - Banking Made Easy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #2a5298);
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 80vh;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .hero-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .logo {
+            width: 200px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .features {
+            margin: 30px 0;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            font-size: 1.1em;
+        }
+
+        .feature-item:before {
+            content: "✓";
+            margin-right: 10px;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .primary-cta {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .secondary-cta {
+            background: white;
+            color: #1a2a6c;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+        }
+
+        .hero-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .feature-item {
+                justify-content: center;
+            }
+
+            .cta-buttons {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="hero-content">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjgwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0ZXh0IHg9IjEwIiB5PSI0MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjQwIiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0id2hpdGUiPkdPMiBCQU5LPC90ZXh0Pjwvc3ZnPg==" alt="Go2Bank Logo" class="logo">
+                <h1>Open A Go2Bank Mobile Account Today - Banking Made Easy</h1>
+                <div class="features">
+                    <div class="feature-item">Unlock the future of banking with Go2Bank! Open your account in minutes</div>
+                    <div class="feature-item">No monthly fees with eligible direct deposits</div>
+                    <div class="feature-item">High yield savings account with up to 1% APY</div>
+                    <div class="feature-item">Cash back rewards on eligible purchases</div>
+                    <div class="feature-item">Free ATM network access across the nation</div>
+                </div>
+                <div class="cta-buttons">
+                    <button class="cta-button primary-cta" onclick="openAccount()">Open Account Now</button>
+                    <button class="cta-button secondary-cta" onclick="learnMore()">Learn More</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://placehold.co/600x400/1a2a6c/white?text=Go2Bank+Mobile+Banking" alt="Go2Bank Mobile Banking">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openAccount() {
+            window.location.href = 'https://www.go2bank.com/start';
+        }
+
+        function learnMore() {
+            window.location.href = 'https://www.go2bank.com/features';
+        }
+
+        // Add smooth scroll behavior
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
